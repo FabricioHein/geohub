@@ -1,0 +1,38 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+               <h4 class="fw-bold py-3 mb-4"><%= plural_table_name.titleize %></h4>
+              <div class="row">
+                <!-- Basic -->
+                <div class="col-md-12 mb-4">
+                  <div class="card">
+                    <h5 class="card-header">
+                    <%%= link_to "Add <%= singular_table_name.downcase %>", <%= new_helper(type: :path) %> %>
+                    </h5>
+              <div class="card-body">
+                <div class=" container-xxl flex-grow-1 container-p-y p-5">
+                  <table class="table"  >
+                    <thead>
+                      <tr>
+                         <% attributes.each do |attribute| %>
+                          <th><%= attribute.name.titleize %></th>
+                        <% end %>
+                      </tr>
+                    </thead>
+                    <tbody>
+                <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+                    <% attributes.each do |attribute| %>
+                      <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+                    <% end %>         
+                        <td><%%= link_to 'Show', <%= @singular_table_name %> %></td>
+                        <td><%%= link_to 'Edit', edit_<%= @singular_table_name %>_path(<%= @singular_table_name %>) %></td>
+                        <td><%%= link_to 'Destroy', <%= @singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <%% end %>          
+                    </tbody>
+                  </table>
+                  
+                  </div>
+                </div>  
+              </div>
+      </div>
+    </div>
+  </div>
+</div>

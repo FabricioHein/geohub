@@ -1,0 +1,39 @@
+.sidebar {
+    height: 100%;
+    width: 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #161d1a;
+    padding-top: 20px;
+    z-index: 9999;
+  }
+  
+  .sidebar-header {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-menu li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    /* border-radius: 50%; */
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar-menu li a:hover {
+    background-color: #eeeeee ;
+  }
+  

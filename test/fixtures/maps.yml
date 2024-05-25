@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  target: MyString
+  maxZoom: 1
+  minZoom: 1
+  initialZoom: 1
+  srid: MyString
+  public: false
+  longitude: 1.5
+  latitude: 1.5
+
+two:
+  target: MyString
+  maxZoom: 1
+  minZoom: 1
+  initialZoom: 1
+  srid: MyString
+  public: false
+  longitude: 1.5
+  latitude: 1.5

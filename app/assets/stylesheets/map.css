@@ -1,0 +1,16 @@
+
+
+.map {  
+  height: 50vh; /* 50% da altura da tela */
+  width: 100%; /* Largura 100% */
+  max-width: 100%; /* Não ultrapassar 100% da largura do contêiner pai */
+  max-height: 100%; /* Não ultrapassar a altura do contêiner pai */
+  position: relative;
+}
+.container-map {
+  display: flex;
+  justify-content: center;
+  padding: 10px; /* Espaço ao redor do contêiner */
+  box-sizing: border-box;
+  position: relative;
+}

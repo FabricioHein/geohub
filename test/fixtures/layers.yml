@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  layer: MyString
+  show_legend: false
+  type: 
+  source: MyString
+  srid: 1
+  display: false
+  primitive: MyString
+  imagery: MyString
+  style_id: 1
+  ordem: 1
+  map: one
+
+two:
+  name: MyString
+  layer: MyString
+  show_legend: false
+  type: 
+  source: MyString
+  srid: 1
+  display: false
+  primitive: MyString
+  imagery: MyString
+  style_id: 1
+  ordem: 1
+  map: two

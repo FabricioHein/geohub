@@ -1,0 +1,15 @@
+//= link_tree ../images
+//= link_directory ../stylesheets .css
+//= link_tree ../../javascript .js
+//= link_tree ../../../vendor/javascript .js
+//= link dx.all.js
+//= link exceljs.min.js
+//= link FileSaver.min.js
+//= link_tree ../fonts
+//= link dataTables.bootstrap5.js
+//= link bootstrap.bundle.min.js
+//= link lib/geomap-all.js
+ //= link lib/openlayers/9.2.3/ol.js
+ //= link lib/printJs/print.min.js
+ //= link lib/proj4/proj4.js
+ //= link lib/turf/turf.min.js

@@ -1,0 +1,23 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+  <h4 class="fw-bold py-3 mb-4">Detalhes do <%= singular_table_name.titleize %></h4>
+  <div class="row">
+    <!-- Basic -->
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <h5 class="card-header">
+       
+        </h5>
+        <div class="card-body">
+        <p style="color: green"><%%= notice %></p>
+            <%%= render @<%= singular_table_name %> %>
+            <div>
+            <%%= link_to "Edit this <%= human_name.downcase %>", <%= edit_helper(type: :path) %> %> |
+            <%%= link_to "Back to <%= human_name.pluralize.downcase %>", <%= index_helper(type: :path) %> %>
+            <%%= button_to "Destroy this <%= human_name.downcase %>", <%= model_resource_name(prefix: "@") %>, method: :delete %>
+           </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

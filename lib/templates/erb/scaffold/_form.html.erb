@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <%%= form_with(model: <%= model_resource_name %>) do |form| %>
+      <%% if <%= singular_table_name %>.errors.any? %>
+        <div class="alert alert-danger">
+          <h2><%%= pluralize(<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h2>
+
+          <ul>
+            <%% <%= singular_table_name %>.errors.each do |error| %>
+          <li><%%= error.full_message %></li>
+        <%% end %>
+          </ul>
+        </div>
+      <%% end %>
+
+      <% attributes.each do |attribute| -%>
+        <div class="mb-3">
+          <% if attribute.password_digest? -%>
+            <%%= form.label :password, style: "display: block", class: "form-label" %>
+            <%%= form.password_field :password, class: "form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%%= form.label :password_confirmation, style: "display: block", class: "form-label" %>
+            <%%= form.password_field :password_confirmation, class: "form-control" %>
+          <% elsif attribute.attachments? -%>
+            <%%= form.label :<%= attribute.column_name %>, style: "display: block", class: "form-label" %>
+            <%%= form.file_field :<%= attribute.column_name %>, multiple: true, class: "form-control" %>
+          <% else -%>
+            <%%= form.label :<%= attribute.column_name %>, style: "display: block", class: "form-label" %>
+            <%%= form.text_field :<%= attribute.column_name %>, class: "form-control" %>
+          <% end -%>
+        </div>
+      <% end -%>
+
+      <div class="mb-3">
+        <%%= form.submit class: "btn btn-primary" %>
+      </div>
+    <%% end %>
+  </div>
+</div>

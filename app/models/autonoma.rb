@@ -1,0 +1,2 @@
+class Autonoma < ApplicationRecord
+end

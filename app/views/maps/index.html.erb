@@ -1,0 +1,66 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+               <h4 class="fw-bold py-3 mb-4">Maps</h4>
+              <div class="row">
+                <!-- Basic -->
+                <div class="col-md-12 mb-4">
+                  <div class="card">
+                    <h5 class="card-header">
+                    <%= link_to "Add map", new_map_path %>
+                    </h5>
+              <div class="card-body">
+                <div class=" container-xxl flex-grow-1 container-p-y p-5">
+                  <table class="table"  >
+                    <thead>
+                      <tr>
+                         
+                          <th>Target</th>
+                        
+                          <th>Max Zoom</th>
+                        
+                          <th>Min Zoom</th>
+                        
+                          <th>Initial Zoom</th>
+                        
+                          <th>Srid</th>
+                        
+                          <th>Public</th>
+                        
+                          <th>Longitude</th>
+                        
+                          <th>Latitude</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                <% @maps.each do |map| %>
+                    
+                      <td><%= map.target %></td>
+                    
+                      <td><%= map.maxZoom %></td>
+                    
+                      <td><%= map.minZoom %></td>
+                    
+                      <td><%= map.initialZoom %></td>
+                    
+                      <td><%= map.srid %></td>
+                    
+                      <td><%= map.public %></td>
+                    
+                      <td><%= map.longitude %></td>
+                    
+                      <td><%= map.latitude %></td>
+                             
+                        <td><%= link_to 'Show', map %></td>
+                        <td><%= link_to 'Edit', edit_map_path(map) %></td>
+                        <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <% end %>          
+                    </tbody>
+                  </table>
+                  
+                  </div>
+                </div>  
+              </div>
+      </div>
+    </div>
+  </div>
+</div>

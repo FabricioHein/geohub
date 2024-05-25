@@ -1,0 +1,17 @@
+version: '3'
+services:
+  geohub-postgres:
+      image: postgres:12.16
+      container_name: geohub-postgres
+      environment:
+        POSTGRES_DB: geohub
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: admin1234
+      ports:
+        - '5432:5432'
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+      restart: always
+  
+volumes:
+  postgres_data:

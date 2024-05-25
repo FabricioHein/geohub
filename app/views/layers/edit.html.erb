@@ -1,0 +1,21 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+  <h4 class="fw-bold py-3 mb-4"> <h1>Editar layer</h1></h4>
+  <div class="row">
+    <!-- Basic -->
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <h5 class="card-header">
+        </h5>
+        <div class="card-body">   
+           <%= render "form", layer: @layer %>
+        <br>
+
+        <div>
+        <%= link_to "Show this layer", @layer %> |
+        <%= link_to "Back to layers", layers_path %>
+        </div>
+           </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+class Territorial < ApplicationRecord
+end

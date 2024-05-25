@@ -1,0 +1,82 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+               <h4 class="fw-bold py-3 mb-4">Layers</h4>
+              <div class="row">
+                <!-- Basic -->
+                <div class="col-md-12 mb-4">
+                  <div class="card">
+                    <h5 class="card-header">
+                    <%= link_to "Add layer", new_layer_path %>
+                    </h5>
+              <div class="card-body">
+                <div class=" container-xxl flex-grow-1 container-p-y p-5">
+                  <table class="table"  >
+                    <thead>
+                      <tr>
+                         
+                          <th>Name</th>
+                        
+                          <th>Layer</th>
+                        
+                          <th>Show Legend</th>
+                        
+                          <th>Type</th>
+                        
+                          <th>Source</th>
+                        
+                          <th>Srid</th>
+                        
+                          <th>Display</th>
+                        
+                          <th>Primitive</th>
+                        
+                          <th>Imagery</th>
+                        
+                          <th>Style</th>
+                        
+                          <th>Ordem</th>
+                        
+                          <th>Map</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                <% @layers.each do |layer| %>
+                    
+                      <td><%= layer.name %></td>
+                    
+                      <td><%= layer.layer %></td>
+                    
+                      <td><%= layer.show_legend %></td>
+                    
+                      <td><%= layer.type %></td>
+                    
+                      <td><%= layer.source %></td>
+                    
+                      <td><%= layer.srid %></td>
+                    
+                      <td><%= layer.display %></td>
+                    
+                      <td><%= layer.primitive %></td>
+                    
+                      <td><%= layer.imagery %></td>
+                    
+                      <td><%= layer.style_id %></td>
+                    
+                      <td><%= layer.ordem %></td>
+                    
+                      <td><%= layer.map %></td>
+                             
+                        <td><%= link_to 'Show', layer %></td>
+                        <td><%= link_to 'Edit', edit_layer_path(layer) %></td>
+                        <td><%= link_to 'Destroy', layer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <% end %>          
+                    </tbody>
+                  </table>
+                  
+                  </div>
+                </div>  
+              </div>
+      </div>
+    </div>
+  </div>
+</div>

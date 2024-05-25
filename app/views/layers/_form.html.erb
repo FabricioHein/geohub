@@ -1,0 +1,70 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <%= form_with(model: layer) do |form| %>
+      <% if layer.errors.any? %>
+        <div class="alert alert-danger">
+          <h2><%= pluralize(layer.errors.count, "error") %> prohibited this layer from being saved:</h2>
+
+          <ul>
+            <% layer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+              <div class="mb-3">
+                      <%= form.label :name, style: "display: block", class: "form-label" %>
+            <%= form.text_field :name, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :layer, style: "display: block", class: "form-label" %>
+            <%= form.text_field :layer, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :show_legend, style: "display: block", class: "form-label" %>
+            <%= form.text_field :show_legend, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :type, style: "display: block", class: "form-label" %>
+            <%= form.text_field :type, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :source, style: "display: block", class: "form-label" %>
+            <%= form.text_field :source, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :srid, style: "display: block", class: "form-label" %>
+            <%= form.text_field :srid, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :display, style: "display: block", class: "form-label" %>
+            <%= form.text_field :display, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :primitive, style: "display: block", class: "form-label" %>
+            <%= form.text_field :primitive, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :imagery, style: "display: block", class: "form-label" %>
+            <%= form.text_field :imagery, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :style_id, style: "display: block", class: "form-label" %>
+            <%= form.text_field :style_id, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :ordem, style: "display: block", class: "form-label" %>
+            <%= form.text_field :ordem, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :map_id, style: "display: block", class: "form-label" %>
+            <%= form.text_field :map_id, class: "form-control" %>
+                  </div>
+      
+      <div class="mb-3">
+        <%= form.submit class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

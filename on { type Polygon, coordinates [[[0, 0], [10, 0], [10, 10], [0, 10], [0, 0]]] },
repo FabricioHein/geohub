@@ -1,0 +1,15 @@
+=> 
+[32m#<Territorial:0x000002311b77b480[0m
+ id: [34m[1m335678[0m,
+ geomJson: {[31m[1m"[0m[31mtype[0m[31m[1m"[0m=>[31m[1m"[0m[31mPolygon[0m[31m[1m"[0m, [31m[1m"[0m[31mcoordinates[0m[31m[1m"[0m=>[[[[34m[1m0[0m, [34m[1m0[0m], [[34m[1m10[0m, [34m[1m0[0m], [[34m[1m10[0m, [34m[1m10[0m], [[34m[1m0[0m, [34m[1m10[0m], [[34m[1m0[0m, [34m[1m0[0m]]]},
+ fields: {[31m[1m"[0m[31mname[0m[31m[1m"[0m=>[31m[1m"[0m[31mTerritory 2[0m[31m[1m"[0m, [31m[1m"[0m[31mpopulation[0m[31m[1m"[0m=>[34m[1m2000[0m},
+ created_at: Sat, 25 May 2024 00:10:44.686042000 UTC +00:00,
+ updated_at: Sat, 25 May 2024 00:10:44.686042000 UTC +00:00,
+ ind_fiscal: [36m[1mnil[0m,
+ unidade: [36m[1mnil[0m,
+ cpf_cnpj: [36m[1mnil[0m,
+ url_autonoma: [36m[1mnil[0m,
+ nome_prop: [36m[1mnil[0m,
+ email: [36m[1mnil[0m,
+ telefone: [36m[1mnil[0m,
+ quadra: [36m[1mnil[0m[32m>[0m

@@ -1,0 +1,46 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+               <h4 class="fw-bold py-3 mb-4">Styles</h4>
+              <div class="row">
+                <!-- Basic -->
+                <div class="col-md-12 mb-4">
+                  <div class="card">
+                    <h5 class="card-header">
+                    <%= link_to "Add style", new_style_path %>
+                    </h5>
+              <div class="card-body">
+                <div class=" container-xxl flex-grow-1 container-p-y p-5">
+                  <table class="table"  >
+                    <thead>
+                      <tr>
+                         
+                          <th>Opacity</th>
+                        
+                          <th>Fill</th>
+                        
+                          <th>Stroke</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                <% @styles.each do |style| %>
+                    
+                      <td><%= style.opacity %></td>
+                    
+                      <td><%= style.fill_id %></td>
+                    
+                      <td><%= style.stroke_id %></td>
+                             
+                        <td><%= link_to 'Show', style %></td>
+                        <td><%= link_to 'Edit', edit_style_path(style) %></td>
+                        <td><%= link_to 'Destroy', style, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <% end %>          
+                    </tbody>
+                  </table>
+                  
+                  </div>
+                </div>  
+              </div>
+      </div>
+    </div>
+  </div>
+</div>

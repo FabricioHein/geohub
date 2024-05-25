@@ -1,0 +1,20 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+  <h4 class="fw-bold py-3 mb-4"><%= human_name.titleize %></h4>
+
+  <div class="row">
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <h5 class="card-header">
+        </h5>
+        <div class="card-body">
+        <h1>New <%= human_name.downcase %></h1>
+        <%%= render "form", <%= singular_table_name %>: @<%= singular_table_name %> %>
+        <br>
+        <div>
+        <%%= link_to "Back to <%= human_name.pluralize.downcase %>", <%= index_helper(type: :path) %> %>
+        </div>      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

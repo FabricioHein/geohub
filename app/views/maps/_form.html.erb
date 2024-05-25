@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <%= form_with(model: map) do |form| %>
+      <% if map.errors.any? %>
+        <div class="alert alert-danger">
+          <h2><%= pluralize(map.errors.count, "error") %> prohibited this map from being saved:</h2>
+
+          <ul>
+            <% map.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+              <div class="mb-3">
+                      <%= form.label :target, style: "display: block", class: "form-label" %>
+            <%= form.text_field :target, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :maxZoom, style: "display: block", class: "form-label" %>
+            <%= form.text_field :maxZoom, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :minZoom, style: "display: block", class: "form-label" %>
+            <%= form.text_field :minZoom, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :initialZoom, style: "display: block", class: "form-label" %>
+            <%= form.text_field :initialZoom, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :srid, style: "display: block", class: "form-label" %>
+            <%= form.text_field :srid, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :public, style: "display: block", class: "form-label" %>
+            <%= form.text_field :public, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :longitude, style: "display: block", class: "form-label" %>
+            <%= form.text_field :longitude, class: "form-control" %>
+                  </div>
+              <div class="mb-3">
+                      <%= form.label :latitude, style: "display: block", class: "form-label" %>
+            <%= form.text_field :latitude, class: "form-control" %>
+                  </div>
+      
+      <div class="mb-3">
+        <%= form.submit class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

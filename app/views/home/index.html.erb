@@ -1,0 +1,33 @@
+<div id="map-index" class="map" >
+      <!-- Divs para os painéis de botões -->
+      <div id="top-panel" class="map-panel">
+        <!-- Botões no painel superior -->
+      </div>
+      <div id="bottom-panel" class="map-panel">
+        <!-- Botões no painel inferior -->
+       
+      <div id="left-panel" class="map-panel">
+        <!-- Botões no painel esquerdo -->
+      </div>
+      <div id="right-panel" class="map-panel">
+        <!-- Botões no painel direito -->
+      </div>
+</div>
+</div>
+
+<script>
+  // JSON de configuração
+  var config = {
+    centro: ol.proj.fromLonLat([-48.8583701, -23.7828638]), // Coordenadas do centro do mapa (longitude, latitude)
+    zoom: 12 // Nível de zoom inicial
+  };
+  // Chamar a função para criar o mapa
+  criarMapa('map-index', config);
+
+  $(document).ready(function() {
+    var data = <%= @mapmas.to_json.html_safe %>; // Seus dados JSON
+    addTableGeoMap(data);   
+  });
+
+ 
+</script>

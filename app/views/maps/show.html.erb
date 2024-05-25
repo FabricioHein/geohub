@@ -1,0 +1,23 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+  <h4 class="fw-bold py-3 mb-4">Detalhes do Map</h4>
+  <div class="row">
+    <!-- Basic -->
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <h5 class="card-header">
+       
+        </h5>
+        <div class="card-body">
+        <p style="color: green"><%= notice %></p>
+            <%= render @map %>
+            <div>
+            <%= link_to "Edit this map", edit_map_path(@map) %> |
+            <%= link_to "Back to maps", maps_path %>
+            <%= button_to "Destroy this map", @map, method: :delete %>
+           </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

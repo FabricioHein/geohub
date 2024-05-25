@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Aplicativo Rails</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', 'bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', 'dataTables.bootstrap5.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', 'openlayers.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+ <%= stylesheet_link_tag 'application', 'map.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', 'theme-default.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'core.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+
+  <%= stylesheet_link_tag 'sidebar', media: 'all' %>
+
+  <%= javascript_include_tag asset_path('jquery-3.7.1.min.js') %>
+  <%= javascript_include_tag asset_path('bootstrap.bundle.min.js') %>
+  <%= javascript_include_tag  'lib/openlayers/9.2.3/ol.js' %>
+  <%= javascript_include_tag  'lib/printJs/print.min.js' %>
+  <%= javascript_include_tag  'lib/proj4/proj4.js' %>
+  <%= javascript_include_tag  'lib/turf/turf.min.js' %>
+
+
+ 
+  <%= javascript_include_tag  'lib/geomap-all.js' %>
+  <%= javascript_include_tag asset_path('datatables.js') %>
+  <%= javascript_include_tag asset_path('dataTables.bootstrap5.js') %>
+
+
+
+  <%= javascript_include_tag asset_path('map.js') %>
+  <%= javascript_include_tag asset_path('table.js') %>
+  
+
+
+
+
+
+</head>
+<body>
+<script>
+function adjustMapSize() {
+    // const mapElement = document.querySelector('.map');
+    // if (mapElement) {
+    //     const windowHeight = window.innerHeight;
+    //     const windowWidth = window.innerWidth;
+
+    //     if(windowHeight > 800){
+    //     mapElement.style.height = 80 + 'vh';
+    //     }
+       
+    // }
+}
+
+// Ajusta o tamanho quando a página carrega
+window.addEventListener('load', adjustMapSize);
+
+// Ajusta o tamanho sempre que a janela é redimensionada
+window.addEventListener('resize', adjustMapSize);
+</script>
+  <%= render 'layouts/navbar' %>
+  <%= render 'layouts/sidebar' %>
+  <div class="main-content"> 
+     <%= yield %>
+  </div> 
+
+</body>
+
+</html>
